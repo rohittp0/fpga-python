@@ -11,7 +11,7 @@ def main():
     print("Let's talk")
 
     while True:
-        char = ser.read().decode()
+        char = chr(int.from_bytes(ser.read(), byteorder="big"))
 
         if char == "~":
             break
